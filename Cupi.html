@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script></script>
+<title>Happy New Year Cupi</title>
+
+<style>
+:root {
+  --primary: #4e8cff;
+  --secondary: #ff4e8c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #4e8cff, #ffffff, #8a2be2);
+  color: #000;
+  overflow-x: hidden;
+}
+
+.year-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  pointer-events: none;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.1; }
+  50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.2; }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.35);
+  animation: fadeUp 1.6s ease;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+h2 {
+  font-weight: 300;
+  margin: 8px 0 18px;
+}
+
+p {
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  line-height: 1.6;
+}
+
+/* Slideshow */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  margin: 18px 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #ffe3ec;
+  color: #6b2de2;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.secret {
+  display: none;
+  margin-top: 15px;
+  font-style: italic;
+  color: #000000;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 18px;
+  animation: floatUp 6s linear forwards;
+  pointer-events: none;
+}
+
+.slide.video-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.video-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-120vh) scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="year-bg">2026</div>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="assets/Matthew_Ifield_-_I_Think_They_Call_This_Love_-_Cover_(SkySound.cc).mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <div class="card">
+
+    <h1>Happy New Year Cupi 💕😘</h1>
+    <h2>My Love 🧿</h2>
+
+    <p>
+      A new year begins,<br>
+      but my favorite part of life<br>
+      remains the same — <strong>you</strong>.
+    </p>
+
+    <div class="slideshow">
+      <div class="slide active" style="background-image:url('assets/IMG_20230902_131141.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/IMG_20241229_013431.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/IMG_20250101_161637_002@-1629411972.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/IMG_20250311_204342.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/IMG-20250101-WA0056.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/IMG-20250301-WA0013.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/Snapchat-1461648947.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/Snapchat-1746942368.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/Snapchat-325647659.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/Snapchat-698972685.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/Snapchat-951667476.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/Videoshot_20241221_204107.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/Videoshot_20250303_092558.jpg')"></div>
+      <div class="slide video-slide">
+        <video autoplay muted loop>
+          <source src="assets/VID-20241218-WA0029.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="showMessage()">A message for you</button>
+      <button onclick="restart()">Can we restart this year?</button>
+      <button onclick="respond()">Let’s talk 🌙</button>
+    </div>
+
+    <div class="secret" id="secret"></div>
+
+    <p style="margin-top:18px;">— Yours Victoria, Always😘</p>
+    <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">Click anywhere to play music 🎵</p>
+
+  </div>
+</div>
+
+<script>
+/* Slideshow */
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+
+// Auto play music
+window.addEventListener('DOMContentLoaded', () => {
+  const audio = document.getElementById('bgMusic');
+  const playAudio = () => {
+    audio.play().catch(e => console.log('Audio play failed:', e));
+  };
+  
+  // Try immediate play
+  playAudio();
+  
+  // Fallback on any user interaction
+  document.addEventListener('click', playAudio, { once: true });
+  document.addEventListener('touchstart', playAudio, { once: true });
+});
+
+setInterval(() => {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}, 3500);
+
+/* Messages */
+function showMessage() {
+  document.getElementById('secret').innerHTML =
+    `Hey Cupi🐼,
+I know things are not the same as they were one year ago. One year ago today, we went to Plassio to make our New Year special, but this time we are not even together. It feels strange and unfortunate, like something changed our path.
+
+Still, I truly want you to be happy in your life. This will be my last interference. I tried many times, but I feel that you do not want to come back to me, no matter how much I try. I respect that. But I also want you to know that the door to reach me will not close.
+
+If someday you feel like talking to me or restarting everything, please come back. You will find me exactly where you left me. I will still have the same love for you, just with more understanding and lessons learned. I hope you understand what I am trying to say.
+
+One more thing I want to request. If there is anything that makes you hesitate or stop yourself from coming to me, please do not assume or imagine things. It only makes everything worse. Just come and talk to me openly. I promise that this time I will be honest with you, because I truly need you, Cupi❤️🧿.
+I love you MyHappyPlace 💕.`;
+  document.getElementById('secret').style.display = 'block';
+}
+
+function restart() {
+  document.getElementById('secret').innerHTML =
+    `This year feels like a blank page…<br><br>
+     Not to erase what we were,<br>
+     but to understand it better.<br><br>
+     If life allows us one more chance,<br>
+     can we restart — gently, honestly,<br>
+     together?`;
+  document.getElementById('secret').style.display = 'block';
+}
+
+function respond() {
+  document.getElementById('secret').innerHTML =
+    `Whenever you are ready,<br>
+     I am here — no rush,<br>
+     no pressure.`;
+  document.getElementById('secret').style.display = 'block';
+}
+
+/* Floating hearts */
+setInterval(() => {
+  const emojis = ['❤️', '🐼', '👽'];
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+  heart.style.left = Math.random() * 100 + 'vw';
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}, 200);
+</script>
+
+</body>
+</html>
